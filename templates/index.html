@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor Scheduling System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Professor Scheduling System</h1>
+
+    <!-- Authentication Section -->
+    <div id="auth">
+        <!-- **Login Section (Hidden when Register is clicked)** -->
+        <div id="loginSection">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="showRegister">Register here</a></p>
+        </div>
+
+        <!-- **Register Section (Hidden by Default)** -->
+        <div id="registerSection" style="display:none;">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" id="reg_username" placeholder="Username" required>
+                <input type="password" id="reg_password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a href="#" id="showLogin">Login here</a></p>
+        </div>
+    </div>
+
+    <!-- Admin Section (Hidden by Default) -->
+<div id="adminSection" style="display:none;">
+    <h2>Pending Schedule Requests</h2>
+    <table id="pendingSchedules">
+        <thead>
+            <tr>
+                <th>Professor</th>
+                <th>Subject</th>
+                <th>Day</th>
+                <th>Time Slot</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Pending schedules will be inserted here -->
+        </tbody>
+    </table>
+
+    <!-- Admin Approved Schedule Table -->
+    <h2>Final Approved Schedule</h2>
+    <table id="adminApprovedSchedule">
+        <thead>
+            <tr>
+                <th>Professor</th>
+                <th>Subject</th>
+                <th>Day</th>
+                <th>Time Slot</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Approved schedules for admin will be inserted here -->
+        </tbody>
+    </table>
+</div>
+
+
+    <!-- Teacher Section (Hidden by Default) -->
+    <div id="scheduleSection" style="display:none;">
+        <h2>Submit Your Availability</h2>
+        <form id="scheduleForm">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" required>
+
+            <label for="day">Day:</label>
+            <select id="day">
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+            </select>
+
+            <label for="time_slot">Time Slot:</label>
+            <select id="time_slot">
+                <option>9 AM - 10 AM</option>
+                <option>10 AM - 11 AM</option>
+                <option>11 AM - 12 PM</option>
+                <option>1 PM - 2 PM</option>
+                <option>2 PM - 3 PM</option>
+            </select>
+
+            <button type="submit">Submit Availability</button>
+        </form>
+
+        <h2>Final Approved Schedule</h2>
+        <table id="approvedSchedule">
+            <thead>
+                <tr>
+                    <th>Professor</th>
+                    <th>Subject</th>
+                    <th>Day</th>
+                    <th>Time Slot</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Approved schedules will be inserted here for TEACHERS -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Logout Button (Now properly positioned in the bottom left) -->
+    <button id="logoutButton" style="display:none; position: fixed; bottom: 20px; left: 20px;" onclick="logout()">Logout</button>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

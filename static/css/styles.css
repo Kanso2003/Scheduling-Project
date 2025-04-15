@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #4CAF50;
+    color: white;
+}
+#logoutButton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: red;
+    color: white;
+    padding: 5px 10px;  /* Reduced size */
+    border: none;
+    cursor: pointer;
+    font-size: 14px;  /* Slightly smaller text */
+    width: 120px; /* Adjust width to match the table cell */
+    height: 35px; /* Adjust height */
+    text-align: center;
+    border-radius: 5px; /* Rounded corners */
+}
+
+#logoutButton:hover {
+    background: darkred;
+}
+

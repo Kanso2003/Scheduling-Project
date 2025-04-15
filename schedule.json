@@ -1,0 +1,16 @@
+[
+    {
+        "professor_name": "kanso",
+        "subject": "maths",
+        "day": "Monday",
+        "time_slot": "9 AM - 10 AM",
+        "status": "approved"
+    },
+    {
+        "professor_name": "kanso",
+        "subject": "chimie",
+        "day": "Monday",
+        "time_slot": "11 AM - 12 PM",
+        "status": "approved"
+    }
+]

@@ -1,0 +1,10 @@
+{
+    "admin": {
+        "password_hash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+        "role": "admin"
+    },
+    "kanso": {
+        "password_hash": "f82abb702798423993e39fb911ad88c80c3d30ed96c92c2bd205ff201731776b",
+        "role": "teacher"
+    }
+}
